@@ -4,6 +4,7 @@ import Router from 'next/router';
 import WPAPI from 'wpapi';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
+import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Config from '../config';
 
@@ -102,6 +103,7 @@ class Index extends Component {
     });
     return (
       <Layout>
+        <Header title={'Home'} />
         <Menu menu={headerMenu} />
         <img
           src="/static/images/wordpress-plus-react-header.png"
