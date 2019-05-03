@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import stylesheet from '../src/styles/style.scss';
+import stylesheet from '../../src/styles/main.scss';
 
 const Header = () => (
   <div>

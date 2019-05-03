@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Head from './Head';
 import Footer from './Footer';
 
 const layoutStyle = {
@@ -11,7 +11,7 @@ const Layout = props => {
   const { children } = props;
   return (
     <div style={layoutStyle}>
-      <Header />
+      <Head />
       {children}
       <Footer />
     </div>
