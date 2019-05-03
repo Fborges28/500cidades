@@ -1,9 +1,10 @@
-@import 'theme-colors';
-$theme-font: 100% verdana, sans-serif;
+$theme-font: 100% verdana,
+sans-serif;
 
 body {
   font: $theme-font;
   background-color: $themeColor-Light;
+
   h1,
   h2 {
     color: $themeColor-Dark;
@@ -18,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 300px;
+
   .button {
     height: 40px;
     margin-top: 20px;

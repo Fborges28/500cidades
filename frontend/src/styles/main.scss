@@ -1,0 +1,31 @@
+//VARIABLES SHARED BETWEEN FILES
+@import 'abstracts/variables',
+'abstracts/mixins';
+
+//LIBRARIES
+/*@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';*/
+
+//LIBRARIES OVERRIDES
+/*@import
+  'vendors-extensions/bootstrap';*/
+
+//BASE STYLES
+@import 'base/reset',
+'base/general',
+'base/typography';
+
+//STRUCTURE
+@import 'layout/header',
+'layout/footer',
+'layout/forms';
+
+//COMPONENTS
+/*@import 'components/loader';*/
+
+//PAGES
+@import 'pages/home';
+
+//THEMES
+@import 'themes/theme';
