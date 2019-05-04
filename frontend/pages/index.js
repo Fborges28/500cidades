@@ -4,9 +4,10 @@ import Router from 'next/router';
 import WPAPI from 'wpapi';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
-import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Config from '../config';
+
+import SidebarMenu from '../views/SidebarMenu';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -101,18 +102,12 @@ class Index extends Component {
         </ul>
       );
     });
-    return (
-      <Layout>
-        <Header title={'Home'} />
-        <Menu menu={headerMenu} />
-        <img
-          src="/static/images/wordpress-plus-react-header.png"
-          width="815"
-          alt="logo"
-          style={headerImageStyle}
-        />
+
+    const content = (
+      <div>
+        {/*<Menu menu={headerMenu} />
         <h1>{page.title.rendered}</h1>
-        <div
+         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: page.content.rendered,
@@ -144,9 +139,10 @@ class Index extends Component {
           You are looking at the REST API-powered React frontend. Be sure to
           also check out the{' '}
           <a href="http://localhost:3001/">GraphQL-powered frontend</a>.
-        </p>
-      </Layout>
+        </p> */}
+      </div>
     );
+    return <SidebarMenu>{content}</SidebarMenu>;
   }
 }
 

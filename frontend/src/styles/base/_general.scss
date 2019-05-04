@@ -3,7 +3,12 @@ sans-serif;
 
 body {
   font: $theme-font;
-  background-color: $themeColor-Light;
+  background: #7dc9c0;
+  background-image: url('../../../static/images/main_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow-x: hidden;
 
   h1,
   h2 {

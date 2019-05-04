@@ -1,6 +1,6 @@
 //VARIABLES SHARED BETWEEN FILES
-@import 'abstracts/variables',
-'abstracts/mixins';
+@import 'abstracts/mixins',
+'abstracts/variables';
 
 //LIBRARIES
 /*@import
@@ -8,8 +8,7 @@
   'vendors/jquery-ui';*/
 
 //LIBRARIES OVERRIDES
-/*@import
-  'vendors-extensions/bootstrap';*/
+@import 'vendors-extensions/bootstrap';
 
 //BASE STYLES
 @import 'base/reset',
