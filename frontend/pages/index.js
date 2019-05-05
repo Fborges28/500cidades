@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+
 import Link from 'next/link';
 import Router from 'next/router';
 import WPAPI from 'wpapi';
+
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
+import SignUpForm from '../components/SignUpForm';
 import Menu from '../components/Menu';
+import Grid from '@material-ui/core/Grid';
 import Config from '../config';
 
 import SidebarMenu from '../views/SidebarMenu';
+import MainHeader from '../containers/MainHeader';
+import FullContainer from '../containers/FullContainer';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-const headerImageStyle = {
-  marginTop: 50,
-  marginBottom: 50,
-};
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  container: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    padding: '18px',
+  },
+});
 
 const tokenExpired = () => {
   if (process.browser) {
@@ -73,7 +87,7 @@ class Index extends Component {
 
   render() {
     const { id } = this.state;
-    const { posts, pages, headerMenu, page } = this.props;
+    const { posts, pages, headerMenu, page, classes } = this.props;
     const fposts = posts.map(post => {
       return (
         <ul key={post.slug}>
@@ -105,6 +119,10 @@ class Index extends Component {
 
     const content = (
       <div>
+        <Grid container spacing={24}>
+          <MainHeader />
+        </Grid>
+
         {/*<Menu menu={headerMenu} />
         <h1>{page.title.rendered}</h1>
          <div
@@ -142,8 +160,21 @@ class Index extends Component {
         </p> */}
       </div>
     );
-    return <SidebarMenu>{content}</SidebarMenu>;
+    return (
+      <div>
+        <SidebarMenu>{content}</SidebarMenu>
+        <FullContainer extraClass={'homeFull'}>
+          <Grid item xs={6}>
+            <SignUpForm />
+          </Grid>
+        </FullContainer>
+      </div>
+    );
   }
 }
 
-export default PageWrapper(Index);
+Index.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(PageWrapper(Index));

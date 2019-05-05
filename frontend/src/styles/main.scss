@@ -8,12 +8,13 @@
   'vendors/jquery-ui';*/
 
 //LIBRARIES OVERRIDES
-@import 'vendors-extensions/bootstrap';
+@import 'vendors-extensions/material-ui',
+'vendors-extensions/bootstrap';
 
 //BASE STYLES
-@import 'base/reset',
-'base/general',
-'base/typography';
+@import 'base/typography',
+'base/reset',
+'base/general';
 
 //STRUCTURE
 @import 'layout/header',
@@ -21,7 +22,7 @@
 'layout/forms';
 
 //COMPONENTS
-/*@import 'components/loader';*/
+@import 'components/main-header';
 
 //PAGES
 @import 'pages/home';

@@ -16,7 +16,7 @@ const theme = createMuiTheme({
     primary: { main: '#7dc9c0' }, // Purple and green play nicely together.
     secondary: { main: 'rgba(0,0,0,0)' }, // This is just green.A700 as hex.
   },
-  shadows: ['none'],
+  shadows: Array(25).fill('none'),
   typography: { useNextVariants: true },
 });
 
@@ -27,21 +27,17 @@ const styles = {
   grow: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginLeft: 0,
-    marginRight: 10,
-  },
 };
 
 function Header(props) {
   const { classes, onClickMenu } = props;
   return (
     <MuiThemeProvider theme={theme}>
-      <div className={classes.root}>
+      <div className="top-header">
         <AppBar position="static" color="secondary">
-          <Toolbar variant="dense">
+          <Toolbar variant="dense" className="top-header-inner">
             <IconButton
-              className={classes.menuButton}
+              className="top-menu-btn main-menu-btn"
               color="inherit"
               aria-label="Menu"
               onClick={onClickMenu}
@@ -53,7 +49,7 @@ function Header(props) {
               variant="extended"
               color="primary"
               aria-label="Add"
-              className={classes.menuButton}
+              className="top-menu-btn"
             >
               Criar conta
             </Fab>
@@ -61,7 +57,7 @@ function Header(props) {
               variant="extended"
               color="secondary"
               aria-label="Add"
-              className={classes.menuButton}
+              className="top-menu-btn"
             >
               Entrar
             </Fab>

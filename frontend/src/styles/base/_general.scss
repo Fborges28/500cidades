@@ -1,5 +1,8 @@
-$theme-font: 100% verdana,
-sans-serif;
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   font: $theme-font;
@@ -9,11 +12,53 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   overflow-x: hidden;
+  padding-bottom: 400px;
+
 
   h1,
   h2 {
     color: $themeColor-Dark;
+    font-family: "Tungsten Bold";
+    color: #fbe9e5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.homeFull {
+  background-color: #fbe9e5;
+  min-height: 600px;
+  margin-top: -65px;
+  padding-top: 25px;
 }
 
 .input-padding {
@@ -28,5 +73,24 @@ body {
   .button {
     height: 40px;
     margin-top: 20px;
+  }
+}
+
+.highlight-box {
+  margin-bottom: 1em;
+  line-height: 2em;
+
+  .highlight {
+    display: inline;
+    background: #2e222c;
+    box-shadow: 10px 0 0 #2e222c, -10px 0 0 #2e222c;
+    color: white;
+    padding: 0.5em;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }
