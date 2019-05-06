@@ -25,40 +25,15 @@ body {
   }
 }
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
 img {
   max-width: 100%;
 }
 
 .homeFull {
   background-color: #fbe9e5;
-  min-height: 600px;
   margin-top: -65px;
   padding-top: 25px;
+  padding-bottom: 100px;
 }
 
 .input-padding {

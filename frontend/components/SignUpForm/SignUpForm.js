@@ -16,7 +16,6 @@ const styles = theme => ({
     padding: '18px',
   },
   paper: {
-    padding: theme.spacing.unit * 2,
     color: theme.palette.text.secondary,
   },
   introText: {
@@ -36,7 +35,7 @@ class SignUpForm extends Component {
       <div className={classes.root}>
         <form onSubmit={this.onSubmit}>
           <Grid container spacing={24} className={classes.paper}>
-            <Grid item xs={12}>
+            <Grid item xs={8}>
               <p className={classes.introText}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquam, eligendi soluta enim, ipsa eaque similique a voluptatum

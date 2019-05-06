@@ -19,7 +19,7 @@ function CenteredGrid(props) {
   return (
     <div className="container">
       <Grid container spacing={24}>
-        <Grid item xs={12}>
+        <Grid item xs={12} className="no-padding">
           {children}
         </Grid>
       </Grid>

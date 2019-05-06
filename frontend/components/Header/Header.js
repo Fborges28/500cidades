@@ -35,9 +35,9 @@ function Header(props) {
     <MuiThemeProvider theme={theme}>
       <div className="top-header">
         <AppBar position="static" color="secondary">
-          <Toolbar variant="dense" className="top-header-inner">
+          <Toolbar variant="dense" className="top-header-inner no-padding">
             <IconButton
-              className="top-menu-btn main-menu-btn"
+              className="top-menu-btn main-menu-btn no-padding"
               color="inherit"
               aria-label="Menu"
               onClick={onClickMenu}

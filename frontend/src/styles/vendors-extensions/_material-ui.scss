@@ -1,15 +1,11 @@
 .container {
   &>div {
-    padding: 0;
-    width: auto;
+    padding: 0 !important;
+    width: auto !important;
   }
 }
 
 .MuiGrid-spacing-xs-24-31 {
-  width: auto;
-  margin: 0;
-}
-
-.MuiGrid-spacing-xs-24-31>.MuiGrid-item-7 {
-  padding: 0px;
+  width: auto !important;
+  margin: 0 !important;
 }

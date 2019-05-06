@@ -164,7 +164,7 @@ class Index extends Component {
       <div>
         <SidebarMenu>{content}</SidebarMenu>
         <FullContainer extraClass={'homeFull'}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <SignUpForm />
           </Grid>
         </FullContainer>
