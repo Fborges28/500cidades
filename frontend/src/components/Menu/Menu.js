@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
-import Config from '../../config';
+import Config from '../../../config';
 
 const linkStyle = {
   marginRight: 15,

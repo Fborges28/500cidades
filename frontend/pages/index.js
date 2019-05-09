@@ -6,16 +6,21 @@ import Link from 'next/link';
 import Router from 'next/router';
 import WPAPI from 'wpapi';
 
-import Layout from '../components/Layout';
-import PageWrapper from '../components/PageWrapper';
-import SignUpForm from '../components/SignUpForm';
-import Menu from '../components/Menu';
+import PageWrapper from '../src/components/PageWrapper';
+import SignUpForm from '../src/components/SignUpForm';
 import Grid from '@material-ui/core/Grid';
 import Config from '../config';
 
-import SidebarMenu from '../views/SidebarMenu';
-import MainHeader from '../containers/MainHeader';
-import FullContainer from '../containers/FullContainer';
+//Components
+import Layout from '../src/components/Layout';
+import Menu from '../src/components/Menu';
+
+//Views
+import SidebarMenu from '../src/views/SidebarMenu';
+
+//Containers
+import MainHeader from '../src/containers/MainHeader';
+import FullContainer from '../src/containers/FullContainer';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -122,42 +127,6 @@ class Index extends Component {
         <Grid container spacing={24}>
           <MainHeader />
         </Grid>
-
-        {/*<Menu menu={headerMenu} />
-        <h1>{page.title.rendered}</h1>
-         <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: page.content.rendered,
-          }}
-        />
-        <h2>Posts</h2>
-        {fposts}
-        <h2>Pages</h2>
-        {fpages}
-        {id ? (
-          <div>
-            <h2>You Are Logged In</h2>
-            <p>
-              Your user ID is <span>{id}</span>, retrieved via an authenticated
-              API query.
-            </p>
-          </div>
-        ) : (
-          <div>
-            <h2>You Are Not Logged In</h2>
-            <p>
-              The frontend is not making authenticated API requests.{' '}
-              <a href="/login">Log in.</a>
-            </p>
-          </div>
-        )}
-        <h2>Where You're At</h2>
-        <p>
-          You are looking at the REST API-powered React frontend. Be sure to
-          also check out the{' '}
-          <a href="http://localhost:3001/">GraphQL-powered frontend</a>.
-        </p> */}
       </div>
     );
     return (

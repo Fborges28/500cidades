@@ -9,6 +9,10 @@ import Config from '../config';
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
 class Post extends Component {
+  componentDidMount() {
+    //REQUISICOES
+  }
+
   static async getInitialProps(context) {
     const { slug, apiRoute } = context.query;
 

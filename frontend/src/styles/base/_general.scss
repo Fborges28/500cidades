@@ -4,36 +4,8 @@ body {
   margin: 0;
 }
 
-body {
-  font: $theme-font;
-  background: #7dc9c0;
-  background-image: url('../../../static/images/main_bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  overflow-x: hidden;
-  padding-bottom: 400px;
-
-
-  h1,
-  h2 {
-    color: $themeColor-Dark;
-    font-family: "Tungsten Bold";
-    color: #fbe9e5;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-}
-
 img {
   max-width: 100%;
-}
-
-.homeFull {
-  background-color: #fbe9e5;
-  margin-top: -65px;
-  padding-top: 25px;
-  padding-bottom: 100px;
 }
 
 .input-padding {
@@ -48,24 +20,5 @@ img {
   .button {
     height: 40px;
     margin-top: 20px;
-  }
-}
-
-.highlight-box {
-  margin-bottom: 1em;
-  line-height: 2em;
-
-  .highlight {
-    display: inline;
-    background: #2e222c;
-    box-shadow: 10px 0 0 #2e222c, -10px 0 0 #2e222c;
-    color: white;
-    padding: 0.5em;
-    padding-left: 0;
-    padding-right: 0;
-    -webkit-box-decoration-break: clone;
-    -ms-box-decoration-break: clone;
-    -o-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 }

@@ -1,0 +1,17 @@
+//VARIABLES SHARED BETWEEN FILES
+@import 'abstracts/mixins',
+'abstracts/variables';
+
+//LIBRARIES
+/*@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';*/
+
+//LIBRARIES OVERRIDES
+@import 'vendors-extensions/material-ui',
+'vendors-extensions/bootstrap';
+
+//BASE STYLES
+@import 'base/typography',
+'base/reset',
+'base/general';
