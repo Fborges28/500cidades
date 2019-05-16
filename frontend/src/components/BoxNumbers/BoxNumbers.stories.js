@@ -5,5 +5,5 @@ import { action } from '@storybook/addon-actions';
 import BoxNumbers from './BoxNumbers';
 
 storiesOf('BoxNumbers', module).add('default', () => (
-  <BoxNumbers numbers={'53'} />
+  <BoxNumbers numbers={'53'} info={'Cidades rodadas'} />
 ));

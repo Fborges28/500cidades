@@ -1,8 +1,44 @@
 .boxNumbers {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   span {
     display: inline-block;
-    padding: 10px 5px;
+    padding: 10px 7px;
+    font-family: "Tungsten Book";
+    font-size: 3em;
     margin-right: 2px;
     border-radius: 3px;
+  }
+
+  p {
+    flex: 0 0 100%;
+    margin: 5px 0;
+    font-family: "Roboto";
+    text-transform: lowercase;
+  }
+}
+
+.boxNumbers.light-blue {
+  span {
+    background-color: $lightBlue;
+    color: #fff;
+  }
+}
+
+.boxNumbers.light-green {
+  span {
+    background-color: $lightGreen;
+    color: #fff;
+  }
+}
+
+.boxNumbers.yellow {
+  span {
+    background-color: $yellow;
+    color: $themeColor-Dark;
   }
 }

@@ -1,0 +1,32 @@
+.DateCard {
+  text-align: left;
+  color: #b3b3b3;
+
+  .DateCard__date {
+    font-family: "Tungsten Book";
+    border-right: 1px solid;
+    padding: 0 10px;
+
+    p {
+      font-size: 2.5em;
+      line-height: 1em;
+      margin: 0;
+    }
+  }
+
+  .DateCard__description {
+    padding: 1em;
+  }
+
+  .DateCard__title {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.5em;
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+
+  .DateCard__bottom-container {
+    margin-top: 20px;
+  }
+}

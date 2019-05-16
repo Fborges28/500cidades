@@ -3,9 +3,8 @@
 'abstracts/variables';
 
 //LIBRARIES
-/*@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';*/
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 //LIBRARIES OVERRIDES
 @import 'vendors-extensions/material-ui',

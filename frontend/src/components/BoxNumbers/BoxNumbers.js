@@ -19,10 +19,11 @@ function BoxNumbers(props) {
   numbers = numbers.split('');
 
   return (
-    <div className="boxNumbers">
+    <div className="boxNumbers light-blue">
       {numbers.map((number, index) => (
         <span key={index}>{number}</span>
       ))}
+      <p>{props.info}</p>
     </div>
   );
 }

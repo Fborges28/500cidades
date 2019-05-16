@@ -93,45 +93,14 @@ class Index extends Component {
   render() {
     const { id } = this.state;
     const { posts, pages, headerMenu, page, classes } = this.props;
-    const fposts = posts.map(post => {
-      return (
-        <ul key={post.slug}>
-          <li>
-            <Link
-              as={`/post/${post.slug}`}
-              href={`/post?slug=${post.slug}&apiRoute=post`}
-            >
-              <a>{post.title.rendered}</a>
-            </Link>
-          </li>
-        </ul>
-      );
-    });
-    const fpages = pages.map(ipage => {
-      return (
-        <ul key={ipage.slug}>
-          <li>
-            <Link
-              as={`/page/${ipage.slug}`}
-              href={`/post?slug=${ipage.slug}&apiRoute=page`}
-            >
-              <a>{ipage.title.rendered}</a>
-            </Link>
-          </li>
-        </ul>
-      );
-    });
 
-    const content = (
+    const notLoggedContent = (
       <div>
-        <Grid container spacing={24}>
-          <MainHeader />
-        </Grid>
-      </div>
-    );
-    return (
-      <div>
-        <SidebarMenu>{content}</SidebarMenu>
+        <SidebarMenu>
+          <Grid container spacing={24}>
+            <MainHeader />
+          </Grid>
+        </SidebarMenu>
         <FullContainer extraClass={'homeFull'}>
           <Grid item xs={12} md={6}>
             <SignUpForm />
@@ -139,6 +108,8 @@ class Index extends Component {
         </FullContainer>
       </div>
     );
+
+    return <div>{notLoggedContent}</div>;
   }
 }
 

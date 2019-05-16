@@ -1,0 +1,15 @@
+.Slider {
+  padding: 0px 30px;
+
+  .slider-content {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  h3 {
+    padding: 2em;
+    margin: 10px;
+  }
+}
+
+.slick-initialized .slick-slide {}
