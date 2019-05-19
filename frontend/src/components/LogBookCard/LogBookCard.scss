@@ -1,7 +1,6 @@
 .LogBookCard {
   position: relative;
   font-family: "Roboto";
-  min-height: 400px;
   overflow: hidden;
 
   .title {
@@ -16,10 +15,14 @@
     width: 100%;
   }
 
+  header {
+    height: 400px;
+  }
+
   img {
-    min-height: 250px;
     width: auto;
     max-width: none;
+    height: 100%;
   }
 }
 
@@ -48,4 +51,12 @@
   align-items: center;
   background: $lightBlue;
   color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .LogBookCard {
+    header {
+      height: 300px;
+    }
+  }
 }

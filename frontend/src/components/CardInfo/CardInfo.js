@@ -7,7 +7,6 @@ import { flexbox } from '@material-ui/system';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowForward from '@material-ui/icons/ArrowForward';
 
-import './CardInfo.scss';
 
 const styles = theme => ({
   button: {
@@ -19,7 +18,7 @@ const styles = theme => ({
 });
 
 function CardInfo(props) {
-  const { classes, children } = props;
+  const { classes, children, image } = props;
   return (
     <div className="CardInfo">
       <Grid container spacing={24} className="no-margin">
@@ -27,7 +26,7 @@ function CardInfo(props) {
           <header>
             <img
               className="CardInfo__thumb"
-              src="/static/images/image4.png"
+              src={image ? image: "/static/images/image4.png"}
               alt=""
             />
           </header>

@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import './Slider.scss';
 
 const styles = theme => ({
   root: {
@@ -53,7 +52,7 @@ class SimpleSlider extends React.Component {
       <div className="Slider">
         <Slider {...settings}>
           {items.map((item, index) => (
-            <div className="slider-content">{item}</div>
+            <div key={index} className="slider-content">{item}</div>
           ))}
         </Slider>
       </div>

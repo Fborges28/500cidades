@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 import Link from 'next/link';
 import Router from 'next/router';
 import WPAPI from 'wpapi';
 
-import PageWrapper from '../src/components/PageWrapper';
-import SignUpForm from '../src/components/SignUpForm';
-import Grid from '@material-ui/core/Grid';
 import Config from '../config';
 
 //Components
+import PageWrapper from '../src/components/PageWrapper';
+import SignUpForm from '../src/components/SignUpForm';
 import Layout from '../src/components/Layout';
 import Menu from '../src/components/Menu';
+import Map from '../src/components/Map';
 
 //Views
 import SidebarMenu from '../src/views/SidebarMenu';
@@ -21,6 +22,10 @@ import SidebarMenu from '../src/views/SidebarMenu';
 //Containers
 import MainHeader from '../src/containers/MainHeader';
 import FullContainer from '../src/containers/FullContainer';
+import LogBookContainer from '../src/containers/LogBookContainer';
+import NextDatesContainer from '../src/containers/NextDatesContainer';
+import IniciativeContainer from '../src/containers/IniciativeContainer';
+import RoadContainer from '../src/containers/RoadContainer';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -109,7 +114,30 @@ class Index extends Component {
       </div>
     );
 
-    return <div>{notLoggedContent}</div>;
+    const loggedContent = (
+      <div>
+        <SidebarMenu>
+
+        </SidebarMenu>
+        <div className="homeMapContainer">
+          <Map height="500px"/>
+        </div>
+        <FullContainer extraClass={'RoadFullContainer'}>
+          <RoadContainer/>
+        </FullContainer>
+        <FullContainer extraClass={'NextDatesFullContainer'}>
+          <NextDatesContainer/>
+        </FullContainer>
+        <FullContainer extraClass={'LogBookFullContainer'}>
+          <LogBookContainer/>
+        </FullContainer>
+        <FullContainer extraClass={'IniciativeFullContainer'}>
+          <IniciativeContainer/>
+        </FullContainer>
+      </div>
+    );
+
+    return <div>{loggedContent}</div>;
   }
 }
 

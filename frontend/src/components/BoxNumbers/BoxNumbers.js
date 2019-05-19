@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import './BoxNumbers.scss';
 
 const styles = {
   root: {
@@ -13,13 +12,13 @@ const styles = {
 };
 
 function BoxNumbers(props) {
-  const { classes } = props;
+  const { classes, extraClass } = props;
 
   let numbers = props.numbers;
   numbers = numbers.split('');
 
   return (
-    <div className="boxNumbers light-blue">
+    <div className={`boxNumbers ${extraClass ? extraClass : ""}`}>
       {numbers.map((number, index) => (
         <span key={index}>{number}</span>
       ))}

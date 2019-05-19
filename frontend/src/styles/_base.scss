@@ -1,10 +1,6 @@
 //VARIABLES SHARED BETWEEN FILES
-@import 'abstracts/mixins',
-'abstracts/variables';
-
-//LIBRARIES
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import './abstracts/_variables.scss',
+'./abstracts/mixins';
 
 //LIBRARIES OVERRIDES
 @import 'vendors-extensions/material-ui',

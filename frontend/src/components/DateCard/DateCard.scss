@@ -1,6 +1,7 @@
 .DateCard {
   text-align: left;
   color: #b3b3b3;
+  padding: 0 10px;
 
   .DateCard__date {
     font-family: "Tungsten Book";
@@ -28,5 +29,9 @@
 
   .DateCard__bottom-container {
     margin-top: 20px;
+  }
+
+  .CardInfo header {
+    height: 140px;
   }
 }

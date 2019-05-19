@@ -6,17 +6,22 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   overflow-x: hidden;
-  padding-bottom: 400px;
 
 
   h1,
-  h2 {
+  h2,
+  h3 {
     color: $themeColor-Dark;
     font-family: "Tungsten Bold";
     color: #fbe9e5;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 20px 0 0 0;
   }
+}
+
+h2 {
+  font-size: 2em;
 }
 
 .homeFull {
@@ -26,6 +31,46 @@ body {
   padding-bottom: 100px;
 }
 
+.homeMapContainer {
+  margin-top: -80px;
+}
+
+.RoadFullContainer {
+  background-color: $themeColor-Dark;
+}
+
+.LogBookFullContainer {
+  background-color: $themeColor-Light;
+}
+
+.NextDatesFullContainer {
+  background-color: $lightBlue;
+}
+
+.IniciativeFullContainer {
+  position: relative;
+  background-image: url('/static/images/main_bg.png');
+  background-repeat: no-repeat;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-image: url("/static/images/footer-pattern.png");
+    position: absolute;
+    top: 100%;
+  }
+
+  .CardInfo {
+    height: 500px;
+    max-height: none;
+    text-align: center;
+  }
+}
+
+.fullcontainer {
+  padding: 30px 0;
+}
 
 
 .highlight-box {

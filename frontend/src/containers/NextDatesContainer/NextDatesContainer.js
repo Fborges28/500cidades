@@ -7,8 +7,6 @@ import Logo from '../../components/Logo';
 import DateCard from '../../components/DateCard';
 import Slider from '../../components/Slider';
 
-import './NextDatesContainer.scss';
-
 const styles = theme => ({
   root: {
     flexGrow: 1,

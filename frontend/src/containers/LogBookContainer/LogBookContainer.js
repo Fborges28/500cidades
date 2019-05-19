@@ -7,8 +7,6 @@ import Logo from '../../components/Logo';
 import LogBookCard from '../../components/LogBookCard';
 import Slider from '../../components/Slider';
 
-import './LogBookContainer.scss';
-
 const styles = theme => ({
   root: {
     flexGrow: 1,

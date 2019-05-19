@@ -21,7 +21,7 @@ function RoadContainer() {
         <Grid item xs={6}>
           <Logo />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} className="roadDescription">
           <h2>Já estamos na estrada</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, id
@@ -30,14 +30,14 @@ function RoadContainer() {
             architecto. Corrupti, animi nulla?
           </p>
           <Grid container spacing={24}>
-            <Grid item xs={4}>
-              <BoxNumbers numbers={'53'} info={'Cidades circuladas'} />
+            <Grid item xs={4} className="no-padding">
+              <BoxNumbers numbers={'53'} extraClass="light-blue" info={'Cidades circuladas'} />
             </Grid>
-            <Grid item xs={4}>
-              <BoxNumbers numbers={'3450'} info={'KM rodados'} />
+            <Grid item xs={4} className="no-padding">
+              <BoxNumbers numbers={'3450'} extraClass="light-green" info={'KM rodados'} />
             </Grid>
-            <Grid item xs={4}>
-              <BoxNumbers numbers={'1253'} info={'Pessoas conectadas'} />
+            <Grid item xs={4} className="no-padding">
+              <BoxNumbers numbers={'1253'} extraClass="yellow" info={'Pessoas conectadas'} />
             </Grid>
           </Grid>
           <h3>Lorem ipsum</h3>

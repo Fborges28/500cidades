@@ -1,12 +1,15 @@
-@import './base';
+@import './_base.scss';
 
 //STRUCTURE
 @import 'layout/header',
 'layout/footer',
 'layout/forms';
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 //COMPONENTS
-@import 'components/main-header';
+@import 'components/all';
 
 //PAGES
 @import 'pages/home';
