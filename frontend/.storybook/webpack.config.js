@@ -20,6 +20,7 @@ module.exports = async ({ config, mode }) => {
         options: {
           data: `
 						@import "@/styles/_base.scss";
+						@import "@/styles/components/_all.scss";
 					`,
         },
       },

@@ -17,7 +17,7 @@ class VideoPlayer extends Component {
         url={url}
         width="100%"
         controls
-        height={height ? height : 'auto'}
+        height={height ? height : '180px'}
       />
     );
   }

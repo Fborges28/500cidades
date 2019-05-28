@@ -31,7 +31,7 @@ export default function LogBookCard() {
                 </p>
               </Grid>
 
-              <Grid container direction="column" wrap="nowrap" className="no-padding">
+              <Grid container direction="column" wrap="nowrap" className="LogBookCard__goButtonContainer no-padding">
                   <div className="half-vertical">
                   </div>
                   <div className="half-vertical">

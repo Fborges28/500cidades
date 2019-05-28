@@ -18,19 +18,17 @@ const styles = theme => ({
 function LogBookContainer(props) {
   const { classes } = props;
   return (
-    <FullContainer extraClass="LogBook">
-      <Grid container spacing={24}>
-        <Grid item xs={12} md={6} lg={4}>
-          <LogBookCard />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <LogBookCard />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <LogBookCard />
-        </Grid>
+    <Grid container spacing={24}>
+      <Grid item xs={12} md={6} lg={4}>
+        <LogBookCard />
       </Grid>
-    </FullContainer>
+      <Grid item xs={12} md={6} lg={4}>
+        <LogBookCard />
+      </Grid>
+      <Grid item xs={12} md={6} lg={4}>
+        <LogBookCard />
+      </Grid>
+    </Grid>
   );
 }
 

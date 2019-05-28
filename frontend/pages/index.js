@@ -15,6 +15,8 @@ import SignUpForm from '../src/components/SignUpForm';
 import Layout from '../src/components/Layout';
 import Menu from '../src/components/Menu';
 import Map from '../src/components/Map';
+import VideoWithDescription from '../src/components/VideoWithDescription';
+import TitleUnderline from '../src/components/TitleUnderline';
 
 //Views
 import SidebarMenu from '../src/views/SidebarMenu';
@@ -22,10 +24,12 @@ import SidebarMenu from '../src/views/SidebarMenu';
 //Containers
 import MainHeader from '../src/containers/MainHeader';
 import FullContainer from '../src/containers/FullContainer';
+import PhotoGrid from '../src/containers/PhotoGrid';
 import LogBookContainer from '../src/containers/LogBookContainer';
 import NextDatesContainer from '../src/containers/NextDatesContainer';
 import IniciativeContainer from '../src/containers/IniciativeContainer';
 import RoadContainer from '../src/containers/RoadContainer';
+import ViewMore from '../src/containers/ViewMore';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -98,6 +102,17 @@ class Index extends Component {
   render() {
     const { id } = this.state;
     const { posts, pages, headerMenu, page, classes } = this.props;
+    let videoInfo = {
+      "video_url": "https://www.youtube.com/watch?v=wLAURi-Zx2c&feature=youtu.be",
+      "date": "30-05-2019",
+      "title": "Rosa Luxemburgo - O filme"
+    }
+    let photos = [
+      "/static/images/image1.png", 
+      "/static/images/image2.png", 
+      "/static/images/image3.png", 
+      "/static/images/image4.png"
+    ]
 
     const notLoggedContent = (
       <div>
@@ -116,24 +131,50 @@ class Index extends Component {
 
     const loggedContent = (
       <div>
-        <SidebarMenu>
-
-        </SidebarMenu>
+        <SidebarMenu/>
         <div className="homeMapContainer">
           <Map height="500px"/>
         </div>
-        <FullContainer extraClass={'RoadFullContainer'}>
-          <RoadContainer/>
+        <RoadContainer/>
+        <NextDatesContainer/>
+        <FullContainer extraClass="mediaHome">
+          <Grid container spacing={24}>
+            <Grid item xs={12}>
+              <ViewMore button="Ver mais relatos" center>
+                <LogBookContainer/>
+              </ViewMore>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <ViewMore title="Galeria de fotos" button="Ver mais relatos">
+                <PhotoGrid photos={photos}/>
+              </ViewMore>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <ViewMore title="Galeria de fotos" button="Ver mais relatos">
+                <Grid container spacing={24}>
+                  <Grid item xs={12} md={6}>
+                    <VideoWithDescription videoInfo={videoInfo}/>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <VideoWithDescription videoInfo={videoInfo}/>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <VideoWithDescription videoInfo={videoInfo}/>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <VideoWithDescription videoInfo={videoInfo}/>
+                  </Grid>
+                </Grid>
+              </ViewMore>
+              
+              
+
+            </Grid>
+          </Grid>
+          
         </FullContainer>
-        <FullContainer extraClass={'NextDatesFullContainer'}>
-          <NextDatesContainer/>
-        </FullContainer>
-        <FullContainer extraClass={'LogBookFullContainer'}>
-          <LogBookContainer/>
-        </FullContainer>
-        <FullContainer extraClass={'IniciativeFullContainer'}>
-          <IniciativeContainer/>
-        </FullContainer>
+        <IniciativeContainer/>
+        
       </div>
     );
 

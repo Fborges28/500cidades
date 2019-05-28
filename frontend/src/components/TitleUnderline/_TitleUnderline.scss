@@ -1,0 +1,17 @@
+.TitleUnderline {
+	position: relative;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 30px;
+	color: #6f6f6f;
+
+	&:after {
+		content: "";
+		width: 35%;
+		max-width: 200px;
+		height: 4px;
+		background-color: $lightBlue;
+		position: absolute;
+		bottom: -10px;
+		left: 0px;
+	}
+}

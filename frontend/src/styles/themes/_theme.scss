@@ -6,22 +6,17 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   overflow-x: hidden;
-
-
-  h1,
-  h2,
-  h3 {
-    color: $themeColor-Dark;
-    font-family: "Tungsten Bold";
-    color: #fbe9e5;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 20px 0 0 0;
-  }
 }
 
-h2 {
-  font-size: 2em;
+h1,
+h2,
+h3 {
+  color: $themeColor-Dark;
+  font-family: "Tungsten Bold";
+  color: #fbe9e5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
 }
 
 .homeFull {
@@ -45,6 +40,10 @@ h2 {
 
 .NextDatesFullContainer {
   background-color: $lightBlue;
+}
+
+.mediaHome {
+  background-color: $themeColor-Light;
 }
 
 .IniciativeFullContainer {

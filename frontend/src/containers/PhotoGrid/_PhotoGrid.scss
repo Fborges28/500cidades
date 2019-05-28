@@ -1,0 +1,22 @@
+.PhotoGrid {
+	width: 100%;
+
+	.PhotoGridArea {
+		display: grid;
+		height: 100%;
+		width: 100%;
+		grid-template-columns: 50% 50%;
+	  grid-template-rows: 50% 50%;
+	  margin-top: 40px;
+
+	  .item {
+	  	overflow: hidden;
+
+	  	img {
+	  		min-width: 100%;
+	  		min-height: 100%;
+	  		max-width: none;
+	  	}
+	  }
+	}
+}

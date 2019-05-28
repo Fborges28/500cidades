@@ -17,7 +17,7 @@ const styles = theme => ({
 function IniciativeContainer(props) {
   const { classes } = props;
   return (
-    <FullContainer extraClass="LogBook">
+    <FullContainer extraClass="IniciativeFullContainer">
       <Grid container spacing={24}>
         <Grid item xs={12} md={6} lg={4}>
           <CardInfo image={"/static/images/image6.png"}>
